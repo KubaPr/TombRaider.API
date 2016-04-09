@@ -1,0 +1,27 @@
+﻿{
+   "graves": [
+      {
+         "location": {
+            "type": "Point",
+            "coordinates": [
+               16.826782,
+               52.3916
+            ]
+         },
+         "id": 286836463,
+         "date_birth": "1904-09-22",
+         "date_death": "0001-01-01",
+         "date_burial": "1978-03-21",
+         "quarter": "1",
+         "surname": "czerwińska",
+         "name": "ludwika",
+         "place": "18",
+         "cm_id": 2,
+         "cm_nr": 63956,
+         "row": "6",
+         "family": "R",
+         "field": "31",
+         "size": "2"
+      }
+   ]
+}
