@@ -21,7 +21,7 @@ namespace TombRaider.API.Controllers
             _graveProvider = graveProvider;
         }
 
-        // GET api/graves/5
+        // GET api/graves/get/{id}
         public JToken Get(int id)
         {
             //Single grave is also a collection
@@ -32,10 +32,11 @@ namespace TombRaider.API.Controllers
         }
 
         [AcceptVerbs("GET")]
+        // GET api/graves/FindGraves
         public JToken FindGraves(string name = null, string surname = null)
         {
             var template = new Grave { Name = name, Surname = surname };
-            var gravesCollection = _graveProvider.FindGraves(new Grave());
+            var gravesCollection = _graveProvider.FindGraves(template);
             dynamic collectionWrapper = new { graves = gravesCollection };
             var serializedGraves = JsonConvert.SerializeObject(collectionWrapper);
             return JToken.Parse(serializedGraves);
