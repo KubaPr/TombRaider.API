@@ -11,13 +11,13 @@
         public string DateDeath { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
-        public int Field { get; set; }
-        public int Id { get; set; }
-        public int CementaryId { get; set; }
-        public int Place { get; set; }
-        public int Quarter { get; set; }
-        public int Row { get; set; }
-        public int Size { get; set; }
+        public int? Field { get; set; }
+        public int? Id { get; set; }
+        public int? CementaryId { get; set; }
+        public int? Place { get; set; }
+        public int? Quarter { get; set; }
+        public int? Row { get; set; }
+        public int? Size { get; set; }
         public Coordinates Location { get; set; }
     }
 }

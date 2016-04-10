@@ -20,16 +20,16 @@ namespace TombRaider.API.Automapper
                 .ForMember(dest => dest.DateBurial, options => options.MapFrom(source => source.Properties.g_date_burial))
                 .ForMember(dest => dest.DateDeath, options => options.MapFrom(source => source.Properties.g_date_death))
                 .ForMember(dest => dest.Id, options => options.MapFrom(source => source.Id))
-                .ForMember(dest => dest.Field, options => options.MapFrom(source => ParseWithDefault(source.Properties.g_field, -1)))
+                .ForMember(dest => dest.Field, options => options.MapFrom(source => ParseWithDefault(source.Properties.g_field, null)))
                 .ForMember(dest => dest.Place, options => options.MapFrom(source => source.Properties.g_place))
-                .ForMember(dest => dest.Quarter, options => options.MapFrom(source => ParseWithDefault(source.Properties.g_quarter, -1)))
-                .ForMember(dest => dest.Row, options => options.MapFrom(source => ParseWithDefault(source.Properties.g_row, -1)))
-                .ForMember(dest => dest.Size, options => options.MapFrom(source => ParseWithDefault(source.Properties.g_size, -1)))
+                .ForMember(dest => dest.Quarter, options => options.MapFrom(source => ParseWithDefault(source.Properties.g_quarter, null)))
+                .ForMember(dest => dest.Row, options => options.MapFrom(source => ParseWithDefault(source.Properties.g_row, null)))
+                .ForMember(dest => dest.Size, options => options.MapFrom(source => ParseWithDefault(source.Properties.g_size, null)))
                 .ForMember(dest => dest.Location, options => options.MapFrom(source => Mapper.Map<GeographicalInfo, Coordinates>(source.Geometry)))
                 .ForMember(dest => dest.DateBirth, options => options.MapFrom(source => source.Properties.g_date_birth));
         }
 
-        public static int ParseWithDefault(string text, int defaultValue)
+        public static int? ParseWithDefault(string text, int? defaultValue)
         {
             int parsed;
             return int.TryParse(text, out parsed) ? parsed : defaultValue;

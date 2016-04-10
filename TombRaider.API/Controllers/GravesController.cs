@@ -23,16 +23,22 @@ namespace TombRaider.API.Controllers
 
         // GET api/graves/5
         public JToken Get(int id)
-        {            
-            var graves = new List<Grave> { _graveProvider.GetGraveById(id) };
-            var serializedGrave = JsonConvert.SerializeObject(graves);
-            return JToken.Parse(serializedGrave);
+        {
+            //Single grave is also a collection
+            var gravesCollection = _graveProvider.GetGraveById(id);
+            dynamic collectionWrapper = new{ graves = gravesCollection };
+            var serializedGraves = JsonConvert.SerializeObject(collectionWrapper);
+            return JToken.Parse(serializedGraves);
         }
 
         [AcceptVerbs("GET")]
-        public JToken FindGraves(int id)
+        public JToken FindGraves(string name = null, string surname = null)
         {
-            throw new NotImplementedException();
+            var template = new Grave { Name = name, Surname = surname };
+            var gravesCollection = _graveProvider.FindGraves(new Grave());
+            dynamic collectionWrapper = new { graves = gravesCollection };
+            var serializedGraves = JsonConvert.SerializeObject(collectionWrapper);
+            return JToken.Parse(serializedGraves);
         }
     }
 }
