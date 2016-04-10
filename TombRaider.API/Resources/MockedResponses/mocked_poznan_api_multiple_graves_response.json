@@ -1,0 +1,73 @@
+﻿{
+  crs: {
+    type: "none",
+    properties: {
+      info: "No CRS information has been provided with this data."
+    }
+  },
+  type: "FeatureCollection",
+  features: [
+    {
+      geometry: {
+        type: "Point",
+        coordinates: [
+          16.7841189182226,
+          52.4768566367361
+        ]
+      },
+      type: "Feature",
+      id: 288602783,
+      properties: {
+        g_date_birth: "1947-10-07",
+        g_quarter: "K",
+        g_surname: "nawrot",
+        print_surname_name: "",
+        print_name: "Edward",
+        g_surname_name: "",
+        g_place: "1",
+        g_date_death: "2005-09-19",
+        paid: -1,
+        cm_id: 23,
+        cm_nr: 73758,
+        g_row: "1",
+        g_family: " ",
+        g_name: "edward",
+        print_surname: "Nawrot",
+        g_field: "",
+        g_date_burial: "0001-01-01",
+        g_size: ""
+      }
+    },
+    {
+      geometry: {
+        type: "Point",
+        coordinates: [
+          16.7841451961075,
+          52.4768589062411
+        ]
+      },
+      type: "Feature",
+      id: 288601872,
+      properties: {
+        g_date_birth: "1876-01-07",
+        g_quarter: "K",
+        g_surname: "dukat",
+        print_surname_name: "",
+        print_name: "Antoni",
+        g_surname_name: "",
+        g_place: "2",
+        g_date_death: "1931-03-21",
+        paid: -1,
+        cm_id: 23,
+        cm_nr: 73759,
+        g_row: "1",
+        g_family: " ",
+        g_name: "antoni",
+        print_surname: "Dukat",
+        g_field: "",
+        g_date_burial: "0001-01-01",
+        g_size: ""
+      }
+    }
+  ]
+}
