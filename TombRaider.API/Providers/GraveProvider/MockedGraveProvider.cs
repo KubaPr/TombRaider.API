@@ -6,7 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using TombRaider.API.PoznanApiRepresentations;
-using TombRaider.Client.Core;
+using TombRaider.API.Core;
 
 namespace TombRaider.API.Providers.GraveProvider
 {
@@ -17,6 +17,7 @@ namespace TombRaider.API.Providers.GraveProvider
         public List<Grave> FindGraves(Grave template)
         {
             var graves = new List<Grave>();
+
             GetFeaturesFromFile().ForEach(f => graves.Add(Mapper.Map<Grave>(f)));
      
             return graves;
@@ -32,7 +33,8 @@ namespace TombRaider.API.Providers.GraveProvider
         private List<Feature> GetFeaturesFromFile()
         {
             var jsonString = File.ReadAllText(filePath);
-            return JsonConvert.DeserializeObject<PoznanApiGravesRepresentation>(jsonString).Features;
+
+            return JsonConvert.DeserializeObject<PoznanApiResponseRepresentation>(jsonString).Features;
         }
     }
 }

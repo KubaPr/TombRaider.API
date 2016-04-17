@@ -12,6 +12,7 @@ namespace TombRaider.API.App_Start
     using Ninject.Web.Common;
     using Providers.GraveProvider;
     using System.Web.Http;
+    using TombRaider.API.Providers.TransportProvider;
     public static class NinjectWebCommon 
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
@@ -63,7 +64,7 @@ namespace TombRaider.API.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind<IGraveProvider>().To<MockedGraveProvider>();
-            
+            kernel.Bind<ITransportProvider>().To<MockedTransportProvider>();
         }         
     }
 }

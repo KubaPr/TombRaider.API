@@ -1,0 +1,56 @@
+﻿{
+    "features": [
+        {
+            "geometry": {
+                "coordinates": [
+                    16.912868406617185,
+                    52.410428897515736
+                ],
+                "type": "Point"
+            },
+            "id": 55281,
+            "type": "Feature",
+            "properties": {
+                "kod": "",
+                "nazwa": "Stacja PRM Most Teatralny",
+                "url": "",
+                "opis_klasy": "Stacje rowerowe",
+                "telefon": "",
+                "adres": "",
+                "miasto": "",
+                "lang": "pl",
+                "email": "",
+                "kolejnosc": "1",
+                "grafika": "",
+                "id_klasy": "4720",
+                "opis": "..."
+            }
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    16.922868406617185,
+                    52.410428897515736
+                ],
+                "type": "Point"
+            },
+            "id": 55281,
+            "type": "Feature",
+            "properties": {
+                "kod": "",
+                "nazwa": "Stacja PRM Most dupa",
+                "url": "",
+                "opis_klasy": "Stacje rowerowe",
+                "telefon": "",
+                "adres": "",
+                "miasto": "",
+                "lang": "pl",
+                "email": "",
+                "kolejnosc": "1",
+                "grafika": "",
+                "id_klasy": "4720",
+                "opis": "..."
+            }
+        }
+    ]
+}

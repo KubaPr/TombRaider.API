@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Web;
 using System.Web.Http;
+using TombRaider.API.Core;
 using TombRaider.API.PoznanApiRepresentations;
 using TombRaider.API.Providers.GraveProvider;
-using TombRaider.Client.Core;
 
 namespace TombRaider.API.Controllers
 {

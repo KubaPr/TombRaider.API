@@ -1,4 +1,4 @@
-﻿namespace TombRaider.Client.Core
+﻿namespace TombRaider.API.Core
 {
     public class Coordinates
     {

@@ -1,0 +1,22 @@
+﻿{
+    "points": [
+        {
+            "Location": {
+                "Latitude": 16.912868406617185,
+                "Longitude": 52.410428897515736,
+                "Type": "Point"
+            },
+            "id": 55281,
+            "name": "Stacja PRM Most Teatralny"
+        },
+        {
+            "Location": {
+                "Latitude": 16.912868406617185,
+                "Longitude": 52.410428897515736,
+                "Type": "Point"
+            },
+            "id": 55281,
+            "name": "TEST"
+        }
+    ]
+}
